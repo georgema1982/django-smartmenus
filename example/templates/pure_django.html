@@ -1,0 +1,25 @@
+{% load smartmenus_tags %}
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}This is a pure Django page{% endblock title %}</title>
+        {% smartmenus_css 'sm-blue' %}
+    </head>
+    <body>
+        <div class="container">
+			<ul class="sm sm-blue">
+			  <li><a href="#">Item 1</a></li>
+			  <li><a href="#">Item 2</a>
+			    <ul>
+			      <li><a href="#">Item 2-1</a></li>
+			      <li><a href="#">Item 2-2</a></li>
+			      <li><a href="#">Item 2-3</a></li>
+			    </ul>
+			  </li>
+			  <li><a href="#">Item 3</a></li>
+			</ul>
+        </div>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		{% smartmenus_js %}
+    </body>
+</html>
